@@ -264,3 +264,76 @@ body {
 .additional-info__languages-item {
     color: var(--secondary-text-color);
 }
+
+.sessions ul,
+.sessions li {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline {
+    background: #eaf6ff;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.timeline h1 {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+}
+
+.sessions {
+    margin-top: 2rem;
+    border-radius: 12px;
+    position: relative;
+}
+
+.sessions li {
+    padding-bottom: 1rem;
+    border-left: 1px solid #abaaed;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+
+    &:last-child {
+        border: 0px;
+        padding-bottom: 0;
+    }
+
+    &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: white;
+        border: 1px solid #4e5ed3;
+        box-shadow: 3px 3px 0px #bab5f8;
+        box-shadow: 3px 3px 0px #bab5f8;
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 0px;
+    }
+}
+
+.date {
+    color: #2a2839;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 750;
+
+    @include mobile-and-up {
+        font-size: .9rem;
+    }
+
+    @include mobile-only {
+        margin-bottom: .3rem;
+        font-size: 0.85rem;
+    }
+
+}
+
+.sessions p {
+    color: #4f4f4f;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-top: 0.4rem;
+}
