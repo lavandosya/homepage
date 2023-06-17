@@ -14,7 +14,7 @@ body {
     --icon-color: #6a737d;
     --border-color: #ff9a0045;
     --text-decoration-color: #ff9a00;
-    
+
 }
 
 .container {
@@ -35,12 +35,22 @@ body {
     justify-content: space-between;
 }
 
+.resume__wrapper {
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgb(210, 176, 26) 1px, transparent 1px), radial-gradient(rgb(201, 167, 20) 1px, rgb(255, 255, 254) 1px);
+    background-size: 26px 26px;
+    background-position: 0px 0px, 13px 13px;
+}
+
 .resume {
-    margin: 50px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     border: 1px solid #f5f5f5;
     box-shadow: 1px 1px 7px 7px #f5f5f5;
     padding: 30px 0;
     max-width: 900px;
+    background: white;
 }
 
 .resume__block {
@@ -170,6 +180,19 @@ body {
     color: var(--secondary-text-color);
     text-align: justify;
 }
+.skills__columns {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25%;
+}
+
+.skills__column {
+    flex: 1;
+}
+
+.skills__column li {
+    margin-bottom: 10px;
+}
 
 .experiences {
     flex: 1 1 60%;
@@ -272,7 +295,7 @@ body {
 }
 
 .timeline {
-    background: #eaf6ff;
+    background: rgba(146, 195, 240, 0.12);
     padding: 2rem;
     border-radius: 15px;
 }
