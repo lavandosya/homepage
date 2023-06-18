@@ -14,6 +14,7 @@ body {
     --icon-color: #6a737d;
     --border-color: #ff9a0045;
     --text-decoration-color: #ff9a00;
+
 }
 
 .container {
@@ -31,15 +32,24 @@ body {
 .fv {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+
+.resume__wrapper {
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(rgb(210, 176, 26) 1px, transparent 1px), radial-gradient(rgb(201, 167, 20) 1px, rgb(255, 255, 254) 1px);
+    background-size: 26px 26px;
+    background-position: 0px 0px, 13px 13px;
 }
 
 .resume {
-    margin: 50px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     border: 1px solid #f5f5f5;
     box-shadow: 1px 1px 7px 7px #f5f5f5;
     padding: 30px 0;
     max-width: 900px;
+    background: white;
 }
 
 .resume__block {
@@ -63,7 +73,7 @@ body {
         margin-bottom: 20px;
     }
 
-    .experiences {
+    .recipe {
         margin-right: 0;
     }
 }
@@ -88,7 +98,7 @@ body {
 .contact-info__block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    flex-basis: 220px;
 }
 
 .contact-info__block--center {
@@ -124,11 +134,13 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .intro {
@@ -167,55 +179,75 @@ body {
     color: var(--secondary-text-color);
     text-align: justify;
 }
+.skills__columns {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25%;
+}
 
-.experiences {
+.skills__column {
+    flex: 1;
+}
+
+.skills__column li {
+    margin-bottom: 10px;
+}
+
+.resume__skills {
+    display: flex;
+}
+
+.recipe__image {
+    max-height: 140px;
+    width: auto;
+}
+
+.recipe {
     flex: 1 1 60%;
     margin-right: 50px;
 }
 
-.experiences__header {
+.recipe__header {
     color: var(--secondary-text-color);
     text-align: left;
     margin-bottom: 20px;
 }
 
-.experiences__company-header-durability {
+.recipe__info-description {
     color: var(--durability-text-color);
     text-align: left;
     margin-bottom: 10px;
     font-size: 15px;
 }
 
-.experiences__company-header-name {
+.recipe__info-title {
     color: var(--primary-text-color);
     text-decoration-color: var(--text-decoration-color);
     text-decoration-line: underline;
     text-align: left;
     margin-bottom: 20px;
+    font-size: x-large;
 }
 
-.experiences__company-project {
-    margin-left: 15px;
-    margin-bottom: 25px;
+.recipe__section {
+    display: flex;
+    justify-content: space-between;
 }
 
-.experiences__company-project-role {
-    color: var(--durability-text-color);
-    text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-
-.experiences__company-project-name {
+.recipe__section-title {
     color: var(--primary-text-color);
     text-align: left;
     margin-bottom: 10px;
 }
 
-.experiences__company-project-responsibilities {
+.recipie__text {
+    max-width: 200px;
+}
+
+.recipe__list {
     color: var(--secondary-text-color);
     padding-left: 20px;
-}
+} 
 
 .additional-info {
     flex: 1 1 40%;
@@ -260,4 +292,77 @@ body {
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+}
+
+.sessions ul,
+.sessions li {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline {
+    background: rgba(146, 195, 240, 0.12);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.timeline h1 {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+}
+
+.sessions {
+    margin-top: 2rem;
+    border-radius: 12px;
+    position: relative;
+}
+
+.sessions li {
+    padding-bottom: 1rem;
+    border-left: 1px solid #abaaed;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+
+    &:last-child {
+        border: 0px;
+        padding-bottom: 0;
+    }
+
+    &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: white;
+        border: 1px solid #4e5ed3;
+        box-shadow: 3px 3px 0px #bab5f8;
+        box-shadow: 3px 3px 0px #bab5f8;
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 0px;
+    }
+}
+
+.date {
+    color: #2a2839;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 750;
+
+    @include mobile-and-up {
+        font-size: .9rem;
+    }
+
+    @include mobile-only {
+        margin-bottom: .3rem;
+        font-size: 0.85rem;
+    }
+
+}
+
+.sessions p {
+    color: #4f4f4f;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-top: 0.4rem;
 }
