@@ -32,7 +32,6 @@ body {
 .fv {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .resume__wrapper {
@@ -74,7 +73,7 @@ body {
         margin-bottom: 20px;
     }
 
-    .experiences {
+    .recipe {
         margin-right: 0;
     }
 }
@@ -194,54 +193,61 @@ body {
     margin-bottom: 10px;
 }
 
-.experiences {
+.resume__skills {
+    display: flex;
+}
+
+.recipe__image {
+    max-height: 140px;
+    width: auto;
+}
+
+.recipe {
     flex: 1 1 60%;
     margin-right: 50px;
 }
 
-.experiences__header {
+.recipe__header {
     color: var(--secondary-text-color);
     text-align: left;
     margin-bottom: 20px;
 }
 
-.experiences__company-header-durability {
+.recipe__info-description {
     color: var(--durability-text-color);
     text-align: left;
     margin-bottom: 10px;
     font-size: 15px;
 }
 
-.experiences__company-header-name {
+.recipe__info-title {
     color: var(--primary-text-color);
     text-decoration-color: var(--text-decoration-color);
     text-decoration-line: underline;
     text-align: left;
     margin-bottom: 20px;
+    font-size: x-large;
 }
 
-.experiences__company-project {
-    margin-left: 15px;
-    margin-bottom: 25px;
+.recipe__section {
+    display: flex;
+    justify-content: space-between;
 }
 
-.experiences__company-project-role {
-    color: var(--durability-text-color);
-    text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-
-.experiences__company-project-name {
+.recipe__section-title {
     color: var(--primary-text-color);
     text-align: left;
     margin-bottom: 10px;
 }
 
-.experiences__company-project-responsibilities {
+.recipie__text {
+    max-width: 200px;
+}
+
+.recipe__list {
     color: var(--secondary-text-color);
     padding-left: 20px;
-}
+} 
 
 .additional-info {
     flex: 1 1 40%;
